@@ -68,6 +68,16 @@ module.exports = function(grunt) {
                 src: 'assets/<%=  config.cssTargetDir %>/*.css'
             }
         },
+        cssmin: {
+           dist: {
+              options: {
+                 banner: '/*! MyLib.js 1.0.0 | Aurelio De Rosa (@AurelioDeRosa) | MIT Licensed */'
+              },
+              files: {
+                 'assets/<%=  config.cssTargetDir %>/*.css': ['assets/<%=  config.cssTargetDir %>/*.css']
+              }
+          }
+        },
 		uglify: {
 			js: {
 				files: {
